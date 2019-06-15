@@ -1,0 +1,48 @@
+#download music,csv from http://bit.ly/music-csv
+
+import pandas as pd
+
+#for decision tree
+from sklearn.tree import DecisionTreeClassifier
+
+#for spliting data into test and training set
+from sklearn.model_selection import train_test_split
+
+#for measuring accuracy
+from sklearn.metrics import accuracy_score
+
+#for saving and loading allready trained model 
+from sklearn.externals import joblib
+
+#for creating decision tree (visual dot file)
+from sklearn import tree
+
+df = pd.read_csv('music.csv')
+X = df.drop(columns=['genre'])
+Y = df['genre']
+X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.2)
+
+model = DecisionTreeClassifier()
+model.fit(X_train,Y_train)
+
+#to save model
+joblib.dump(model,'music-recommender.joblib')
+
+
+#to load model
+model = joblib.load('music-recommeder.joblib')
+
+pre = model.predict(X_test)
+#or pre = model.predict([ [21,1] ])
+accuracy_score(Y_test, pre)
+ 
+
+#to create decision tree
+tree.export_graphviz(model, 
+                     out_file='music-recommeder.dot', 
+                     feature_names=['age','gender'], 
+                     class_names=sorted(Y.unique()),
+                     label='all',
+                     rounded=True,
+                     filled=True
+                    )

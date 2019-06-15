@@ -1,0 +1,23 @@
+1)install lodash for a project
+->npm install lodash
+
+2)install browserify
+->npm install -g browserify
+here -g represents global
+
+3)now every time you update any javascript file write
+->browserify javascript_file_name > bundle.js
+ex ->browserify demo.js > bundle.js 
+
+4)We can run the project live using 
+->live-server
+
+**don't ever upload the node-module folder on the github as it is very big. As we have given it's reference in the package.json file, any one who clone our project just has to run (->npm install) to get get folder eaisly.
+
+**Also as we have to repeat step 3 and step 4 every time we make a change in javascript file just write these in the package.json file.
+"scripts": {
+    "build": "browserify demo.js > bundle.js && live-server"
+},
+
+and we just have to run (->npm run build) in place of the two steps
+  

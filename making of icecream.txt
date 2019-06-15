@@ -1,0 +1,4 @@
+1) Create a folder on Windows named Icecream
+2) Open windows powershell and open this directory and write code .
+3) Your visual code will open
+4) To install any module write pip install pyttsx3

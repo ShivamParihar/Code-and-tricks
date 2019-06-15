@@ -1,0 +1,20 @@
+how to get temporary online link to use in php
+
+1)goto ngrok.com
+2)download the setup
+3)extract exe file in Desktop
+4)open command prompt
+5)write
+	cd Desktop
+	ngrok http 80
+6)u will get a url in command line
+7)copy that link and append all url of the localhost
+ex- 
+url from command prompt
+	http://asdasd.ngrok.io
+url of the site on local host
+	localhost//asudh/sad/asd/index.php
+make the url 
+	http://asdasd.ngrok.io/asudh/sad/asd/index.php
+
+run the link on internet

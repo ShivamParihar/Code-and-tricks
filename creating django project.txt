@@ -1,0 +1,19 @@
+1) create pychram project
+2) In pycharm terminal write
+-> django-admin startproject [project-name]
+3) To run open [project-name] dicrectory using
+-> cd [project-name]
+and then write
+-> pythomn manage.py runserver
+
+4)To create app write 
+-> python manage.py startapp [app-name]
+
+5)To apply all migrations in database write
+-> python manage.py migrate
+
+6)To just create migrations write
+->python manage.py makemigrations
+
+7)To create superuser run the command
+->python manage.py createsuperuser

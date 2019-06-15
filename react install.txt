@@ -1,0 +1,10 @@
+Install react
+on the node.js commamd prompt write
+->npm install -g create-react-app
+
+to create a react project with predefined webpack, baben-open the directory where you want to create the project and write
+->create-react-app <project-name>
+ex -> create-react-app robofriends
+
+Install Tachyons(It's like a bootstrap liberary)
+->npm install tachyons

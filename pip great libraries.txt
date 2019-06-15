@@ -1,0 +1,2 @@
+1)Contains sets of English words
+	!pip install english-words
